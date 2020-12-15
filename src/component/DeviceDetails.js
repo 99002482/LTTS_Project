@@ -28,13 +28,7 @@ class DeviceDetails extends Component {
 
   render() {
     var { isLoaded, data } = this.state;
-    if (!isLoaded) {
-      return (
-        <div>
-          <b>Loading....</b>
-        </div>
-      );
-    } else {
+   
       return (
         <div className="App">
           <Header />
@@ -98,6 +92,6 @@ class DeviceDetails extends Component {
       );
     }
   }
-}
+
 
 export default DeviceDetails;

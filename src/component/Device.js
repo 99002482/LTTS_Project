@@ -27,14 +27,7 @@ class Device extends Component {
 
   render() {
     var { isLoaded, data } = this.state;
-    if (!isLoaded) {
-      return (
-        <div>
-          <b>Loading....</b>
-        </div>
-      );
-    } else {
-      return (
+         return (
         <div className="App">
           <Header />
           <div className="pageheading-device">
@@ -77,6 +70,6 @@ class Device extends Component {
       );
     }
   }
-}
+
 
 export default Device;
