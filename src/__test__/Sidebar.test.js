@@ -1,7 +1,7 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import ReactDom from "react-dom";
-import Device from "../component/Sidebar";
+
 import Sidebar from "../component/Sidebar";
 
 describe("Device", () => {
