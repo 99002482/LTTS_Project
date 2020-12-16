@@ -13,20 +13,9 @@ class Profile extends Component {
     };
   }
 
-  componentDidMount() {
-    fetch("https://jsonplaceholder.typicode.com/users/3")
-      .then((res) => res.json())
-      .then((json) => {
-        this.setState({
-          isLoaded: true,
-          items: [json],
-        });
-      });
-  }
+  componentDidMount() {}
 
   render() {
-    var { items } = this.state;
-
     return (
       <div>
         <div>
@@ -40,28 +29,29 @@ class Profile extends Component {
           <br />
           <br />
 
-          {items.map((item) => (
-            <center>
-              {" "}
-              <div key={items.id} className="profile-data">
-                Name: &nbsp;&nbsp;<p>{item.name}</p> <br />
-                <br />
-                <br />
-                &nbsp;&nbsp;&nbsp; Email: &nbsp;&nbsp;&nbsp;
-                <p>{item.email}</p>
-                <br />
-                <br />
-                <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                Phone:&nbsp;&nbsp;{" "}
-                <input type="text" defaultValue={item.phone} /> <br />
-                <br />
-                <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                Address: <input type="text" defaultValue={item.address.city} />
-              </div>
-            </center>
-          ))}
+          <center>
+            {" "}
+            <div className="profile-data">
+              Name: &nbsp;&nbsp;<p>Username</p> <br />
+              <br />
+              <br />
+              &nbsp;&nbsp;&nbsp; Email: &nbsp;&nbsp;&nbsp;
+              <p>User Email</p>
+              <br />
+              <br />
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              Phone:&nbsp;&nbsp; <input
+                type="text"
+                defaultValue="User Phone"
+              />{" "}
+              <br />
+              <br />
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              Address: <input type="text" defaultValue="User Addresss" />
+            </div>
+          </center>
 
           <br />
           <br />

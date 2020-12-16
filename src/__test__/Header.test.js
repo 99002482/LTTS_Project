@@ -11,7 +11,7 @@ describe("Header", () => {
 
   it("Text fields working", () => {
     const { getAllByText } = render(<Header />);
-    getAllByText("EATON SHADOW PROJECT POC");
+    getAllByText("Device Health Monitoring System");
   });
   it("Image button working", () => {
     render(<Header />);

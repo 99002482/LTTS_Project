@@ -2,6 +2,7 @@ import React from "react";
 import ReactDom from "react-dom";
 import { render } from "@testing-library/react";
 import Sidebar from "../component/Sidebar";
+import Cardview from "../component/Cardview";
 
 
 describe("Dashboard", () => {
@@ -13,9 +14,14 @@ describe("Dashboard", () => {
     
   });
   
-  it("renders cardview  without crashing", () => {
+  it("renders Sidebar  without crashing", () => {
     const div = document.createElement("div");
     ReactDom.render(<Sidebar></Sidebar>, div);
+  });
+
+  it("renders Cardview  without crashing", () => {
+    const div = document.createElement("div");
+    ReactDom.render(<Cardview></Cardview>, div);
   });
 
   it("location dropdown working", () => {

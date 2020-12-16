@@ -10,7 +10,7 @@ describe("Profile", () => {
   });
 
   it("Page heading working", () => {
-    const { getAllByText ,getAllByTestId} = render(<Profile />);
+    const { getAllByText } = render(<Profile />);
     getAllByText("Profile Details");
     
  });

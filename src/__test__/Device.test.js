@@ -8,4 +8,16 @@ describe("Device", () => {
     const div = document.createElement("div");
     ReactDom.render(<Device></Device>, div);
   });
+
+  it("Text fields working", () => {
+    const { getAllByText } = render(<Device />);
+    getAllByText("Devices");
+    getAllByText("ID");
+    getAllByText("Name");
+  });
+
+  it("view Details button working", () => {
+    render(<Device />);
+      screen.getByRole("button", { hidden: true });
+  });
 });

@@ -3,7 +3,6 @@ import Header from "./Header";
 import Footer from "./Footer";
 import "../asset/css/App.css";
 import { Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
 
 class Device extends Component {
   constructor(props) {
@@ -14,62 +13,42 @@ class Device extends Component {
     };
   }
 
-  componentDidMount() {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((res) => res.json())
-      .then((json) => {
-        this.setState({
-          isLoaded: true,
-          data: json,
-        });
-      });
-  }
+  componentDidMount() {}
 
   render() {
-    var { isLoaded, data } = this.state;
-         return (
-        <div className="App">
-          <Header />
-          <div className="pageheading-device">
-            <h2>Devices</h2>
-          </div>
-          <br></br>
-          <br></br>
-          <div className="device-table">
-            {data.map((item) => (
-              <table border="1">
-                <div key={item.id}>
-                  <tr>
-                    <td> {item.id}</td>
-                    <td>{item.username}</td>
-                  </tr>
-                </div>
-              </table>
-            ))}
-          </div>
-          <div className="sidebar-device">
-            <br></br>
-            <br></br>
-            {data.map((item) => (
-              <div key={item.id}>
-                <center>
-                  <br />
-                  <Link to="/Devicedetails">
-                    {" "}
-                    <Button className="device-button">
-                      Device {item.id} View Details
-                    </Button>
-                  </Link>
-                </center>
-              </div>
-            ))}
-          </div>
-
-          <Footer />
+    return (
+      <div className="App">
+        <Header />
+        <div className="pageheading-device">
+          <h2>Devices</h2>
         </div>
-      );
-    }
-  }
+        <br></br>
+        <br></br>
+        <div className="device-table">
+          <table border="1">
+            <thead>
+              <thead> ID</thead>
+              <thead>Name</thead>
+            </thead>
+          </table>
+        </div>
+        <div className="sidebar-device">
+          <br></br>
+          <br></br>
 
+          <div>
+            <center>
+              <br />
+
+              <Button className="device-button">Device View Details</Button>
+            </center>
+          </div>
+        </div>
+
+        <Footer />
+      </div>
+    );
+  }
+}
 
 export default Device;
